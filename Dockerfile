@@ -5,7 +5,7 @@ FROM node:18-alpine
 WORKDIR /usr/src/app
 
 # Копировать package.json для установки зависимостей
-COPY package*.json ./\r
+COPY package*.json ./
 
 # Установить зависимости (express, socket.io, pg)
 RUN npm install
@@ -17,4 +17,5 @@ COPY . .
 EXPOSE 3000
 
 # Запустить приложение
+
 CMD [ "node", "server.js" ]
